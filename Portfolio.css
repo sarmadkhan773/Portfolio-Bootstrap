@@ -158,6 +158,7 @@ section {
 
 .gradient-text {
     background: linear-gradient(90deg, #00f5a0, #00c9ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -208,6 +209,7 @@ h3.section-title,
 #projects h3,
 #contact h3 {
     background: linear-gradient(90deg, #00f5a0, #00c9ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
