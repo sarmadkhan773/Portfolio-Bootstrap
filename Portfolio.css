@@ -1,0 +1,340 @@
+/* ===== General Styles ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9fafb;
+    color: #1a1a1a;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+h3{
+    color: #00f5a0;
+}
+
+/* ===== Navbar Styles ===== */
+.navbar-custom {
+    transition: all 0.5s ease;
+    font-weight: 600;
+    z-index: 999;
+}
+
+/* 🌞 Light Mode Navbar */
+.light-mode .navbar-custom {
+    background-color: #ffffff !important;
+    color: #121235 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌙 Dark Mode Navbar */
+.dark-mode .navbar-custom {
+    background-color: #121235 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Navbar Links */
+.nav-link {
+    color: inherit !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00f5a0 !important;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.light-mode .navbar-custom .navbar-brand {
+    color: #121235 !important;
+}
+
+.dark-mode .navbar-custom .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.light-mode .theme-toggle {
+    background-color: #121235;
+    color: #ffffff;
+}
+
+.dark-mode .theme-toggle {
+    background-color: #00f5a0;
+    color: #121235;
+}
+
+/* ===== Section Backgrounds (Symmetry) ===== */
+section {
+    padding: 80px 0;
+    transition: 0.5s ease, color 0.5s ease;
+}
+
+/* 🌟 Hero Section */
+.hero-section {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #e8efff, #ffffff, #dce7ff);
+    transition: all 0.7s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .hero-section {
+    background: linear-gradient(to bottom right, #0a0f1e, #11182f, #1c2541);
+}
+
+/* 🧠 About Section */
+.about-section {
+    background: linear-gradient(135deg, #f0f9ff, #cbebff);
+}
+
+.dark-mode .about-section {
+    background: linear-gradient(135deg, #11182f, #0a0f1f);
+}
+
+/* ⚙️ Skills Section */
+#skills {
+    background: linear-gradient(to bottom, #ffffff, #e8efff);
+}
+
+.dark-mode #skills {
+    background: linear-gradient(to bottom, #0d1324, #0a0f1f);
+}
+
+/* 🚀 Projects Section */
+#projects {
+    background: linear-gradient(135deg, #f0f9ff, #cbebff);
+}
+
+.dark-mode #projects {
+    background: linear-gradient(135deg, #0d1324, #11182f);
+}
+
+
+/* 📝 Contact Section */
+#contact {
+    background: linear-gradient(135deg, #f9f9f9, #e8efff);
+}
+
+.dark-mode #contact {
+    background: linear-gradient(135deg, #0d1324, #11182f);
+}
+
+/* 🌙 Footer */
+.footer-custom {
+    background: linear-gradient(to right, #11182f, #1c2443);
+    color: #ffffff;
+}
+
+.dark-mode .footer-custom {
+    background: linear-gradient(to right, #000, #0d1324);
+}
+
+/* ===== Hero Text ===== */
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00f5a0, #00c9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Image */
+.hero-profile {
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    transform: scale(1.05);
+    animation: slideIn 1.2s ease-out forwards;
+}
+
+/* Glowing Background */
+.glow-bg {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #00c9ff40, transparent 70%);
+    filter: blur(60px);
+    animation: spin-slow 10s linear infinite;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Gradient Buttons */
+.btn-gradient {
+    background: linear-gradient(to right, #00f5a0, #00c9ff);
+    color: #0a0f1e;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00c9ff80;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+    color: #00c9ff80;
+    font-weight: 700;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* ===== Social Icons Hover Effect ===== */
+.about-section a i,
+.d-flex a i {
+    transition: all 0.3s ease-in;
+}
+
+.d-flex a i:hover {
+    color: #00f5a0;
+    transform: scale(1.2);
+    text-shadow: 0 0 2px #00f5a0;
+}
+
+.dark-mode .d-flex a i:hover {
+    color: #00c9ff;
+    text-shadow: 0 0 10px #00c9ff;
+}
+
+/* ===== Skill Cards ===== */
+.skill-card {
+    transition: all 0.4s ease;
+    border-radius: 20px;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #00f5a0, #00c9ff);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 201, 255, 0.4);
+}
+
+/* ===== Contact Form ===== */
+.contact-form input,
+.contact-form textarea {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00c9ff;
+    outline: none;
+}
+
+/* ===== Footer ===== */
+.footer-custom {
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* ===== Dark Mode Adjustments ===== */
+.dark-mode {
+    background-color: #0a0f1e;
+    color: #e0e7ff;
+}
+
+.dark-mode .card,
+.dark-mode .skill-card {
+    background-color: #121235 !important;
+    color: #e0e7ff !important;
+}
+
+.dark-mode .bg-light {
+    background-color: #121235 !important;
+}
+
+/* ===== Scroll Alignment ===== */
+section {
+    scroll-margin-top: 90px;
+}
+
+/* ===== Animations ===== */
+@keyframes spin-slow {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 245, 160, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 245, 160, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 245, 160, 0.5);
+    }
+}
