@@ -334,7 +334,7 @@ section {
     box-shadow: 0 0 0 0.2rem rgba(0, 201, 255, 0.25);
 }
 .contact-form input[type="tel"] {
-    width: 91vh;
+    width: 100%;
     display: block;
 }
 /* ===== Dark Mode Contact Form ===== */
