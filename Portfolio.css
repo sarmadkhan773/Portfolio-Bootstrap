@@ -10,9 +10,6 @@ body {
     overflow-x: hidden;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
-h3{
-    color: #00f5a0;
-}
 
 /* ===== Navbar Styles ===== */
 .navbar-custom {
@@ -133,7 +130,6 @@ section {
     background: linear-gradient(135deg, #0d1324, #11182f);
 }
 
-
 /* 📝 Contact Section */
 #contact {
     background: linear-gradient(135deg, #f9f9f9, #e8efff);
@@ -204,12 +200,20 @@ section {
     box-shadow: 0 0 15px #00c9ff80;
 }
 
-/* ===== Section Titles ===== */
-.section-title {
-    color: #00c9ff80;
+/* ===== Unified Section Titles ===== */
+.section-title,
+h3.section-title,
+#about h3,
+#skills h3,
+#projects h3,
+#contact h3 {
+    background: linear-gradient(90deg, #00f5a0, #00c9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 700;
     animation: fadeIn 1.2s ease-out forwards;
 }
+
 
 /* ===== Social Icons Hover Effect ===== */
 .about-section a i,
@@ -240,6 +244,37 @@ section {
     color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 201, 255, 0.4);
 }
+
+/* Hover effect */
+.hover-scale {
+    transition: all 0.4s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 201, 255, 0.3);
+}
+
+.dark-mode #stats {
+    background: linear-gradient(135deg, #0a0f1e, #11182f);
+    color: #e0e7ff;
+}
+
+.dark-mode #stats .bg-white {
+    background-color: #11182f !important;
+    border-color: #1f2a48 !important;
+}
+
+.dark-mode #stats i,
+.dark-mode #stats h3 {
+    color: #00f5a0 !important;
+}
+
+.dark-mode #stats P {
+    color: #e0e7ff !important;
+}
+
+
 
 /* ===== Contact Form ===== */
 .contact-form input,
@@ -284,11 +319,96 @@ section {
     scroll-margin-top: 90px;
 }
 
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00c9ff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 201, 255, 0.25);
+}
+.contact-form input[type="tel"] {
+    width: 91vh;
+    display: block;
+}
+/* ===== Dark Mode Contact Form ===== */
+.dark-mode .contact-form {
+    background-color: #11182f;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 201, 255, 0.15);
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+    background-color: #0a0f1e;
+    color: #e0e7ff;
+    border: 1px solid #1f2a48;
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+    border-color: #00c9ff;
+    box-shadow: 0 0 10px rgba(0, 201, 255, 0.3);
+    background-color: #11182f;
+}
+
+.dark-mode .contact-form ::placeholder {
+    color: #aab2d5;
+}
+
+.dark-mode .btn-gradient {
+    background: linear-gradient(90deg, #00f5a0, #00c9ff);
+    color: #0a0f1e;
+    font-weight: 600;
+}
+
+.dark-mode .btn-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 201, 255, 0.4);
+}
+/* ===== Fix: Dark Mode Text in Contact Section ===== */
+.dark-mode #contact,
+.dark-mode #contact p,
+.dark-mode #contact label,
+.dark-mode #contact h4,
+.dark-mode #contact h5,
+.dark-mode #contact span {
+    color: #e0e7ff !important;
+}
+
+.dark-mode #contact .text-dark {
+    color: #e0e7ff !important;
+}
+
+/* Optional: Add glow to section title */
+.dark-mode #contact h3.section-title {
+    text-shadow: 0 0 10px rgba(0, 201, 255, 0.3);
+}
+
+
+.btn-gradient {
+    background: linear-gradient(90deg, #00f5a0, #00c9ff);
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.05);
+}
+
+
 /* ===== Animations ===== */
 @keyframes spin-slow {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -299,6 +419,7 @@ section {
         opacity: 0;
         transform: translateY(40px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -310,6 +431,7 @@ section {
         opacity: 0;
         transform: translateY(60px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -321,6 +443,7 @@ section {
         opacity: 0;
         transform: translateX(60px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -331,9 +454,11 @@ section {
     0% {
         box-shadow: 0 0 10px rgba(0, 245, 160, 0.5);
     }
+
     50% {
         box-shadow: 0 0 25px rgba(0, 245, 160, 0.8);
     }
+
     100% {
         box-shadow: 0 0 10px rgba(0, 245, 160, 0.5);
     }
