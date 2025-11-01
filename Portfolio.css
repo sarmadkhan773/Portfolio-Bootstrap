@@ -403,6 +403,141 @@ section {
 .btn-gradient:hover {
     transform: scale(1.05);
 }
+/* ===== 🚀 Projects Section ===== */
+#projects {
+    background: linear-gradient(135deg, #f0f9ff, #cbebff);
+    padding: 80px 0;
+    transition: all 0.5s ease;
+}
+
+.dark-mode #projects {
+    background: linear-gradient(135deg, #0d1324, #11182f);
+}
+
+/* Project Card Base */
+.project-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.dark-mode .project-card {
+    background-color: #1a1f3a;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover Animation */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 201, 255, 0.3);
+}
+
+/* Project Image */
+.project-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Zoom Effect on Hover */
+.project-card:hover .project-img {
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+
+/* Project Overlay */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 15, 30, 0.9), rgba(0, 0, 0, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    color: #ffffff;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Project Title and Description */
+.project-overlay h5 {
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.project-overlay p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d0e7ff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay Buttons */
+.project-overlay .btn {
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.project-overlay .btn-outline-light:hover {
+    background: linear-gradient(90deg, #00f5a0, #00c9ff);
+    border: none;
+    color: #121235;
+}
+
+.project-overlay .btn-light:hover {
+    background: linear-gradient(90deg, #00c9ff, #00f5a0);
+    color: #121235;
+}
+
+/* Card Shadow Glow */
+.project-card:hover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 201, 255, 0.4);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-img {
+        height: 220px;
+    }
+
+    .project-overlay h5 {
+        font-size: 1rem;
+    }
+
+    .project-overlay p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .project-overlay {
+    background: linear-gradient(to top, rgba(0, 201, 255, 0.15), rgba(0, 0, 0, 0.7));
+}
+
+.dark-mode .project-overlay p {
+    color: #b6d8ff;
+}
+
+.dark-mode .project-overlay h5 {
+    color: #00f5a0;
+}
+
+.dark-mode .project-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 245, 160, 0.25);
+}
 
 
 /* ===== Animations ===== */
